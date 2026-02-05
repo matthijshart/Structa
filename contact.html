@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Wachtlaag</title>
+  <meta name="description" content="Plan een demo van Wachtlaag. We beantwoorden vragen, lopen door het platform en helpen je eerste object onboarden.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="skip-link" href="#main">Naar inhoud</a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Wachtlaag home">
+      <svg class="logo" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M14 1.5C7.096 1.5 1.5 7.096 1.5 14C1.5 20.904 7.096 26.5 14 26.5C20.904 26.5 26.5 20.904 26.5 14C26.5 7.096 20.904 1.5 14 1.5Z" stroke="currentColor" stroke-width="2"/>
+  <path d="M14 7V14L18.5 16.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6.8 19.2C8.4 21.2 11 22.5 14 22.5C18.7 22.5 22.5 18.7 22.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+      <span class="brand-text">Wachtlaag</span>
+    </a>
+
+    <button class="nav-toggle" aria-controls="nav" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+      <span class="burger"></span>
+    </button>
+
+    <nav id="nav" class="nav" aria-label="Hoofdnavigatie">
+      <a class="nav-link " href="index.html">Overzicht</a>
+      <a class="nav-link " href="product.html">Product</a>
+      <a class="nav-link " href="prijzen.html">Prijzen</a>
+      <a class="nav-link " href="security.html">Security & compliance</a>
+      <a class="nav-link active" href="contact.html">Contact</a>
+      <a class="btn btn-primary nav-cta" href="contact.html#demo">Demo boeken</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <div class="kicker"><span class="pill">Contact</span> Demo, pilot of vragen</div>
+      <h1 class="h2">Boek een demo om Wachtlaag in actie te zien.</h1>
+      <p class="p">
+        We beantwoorden je vragen, laten zien hoe het platform werkt, en helpen je met een eerste onboarding.
+        Geen lange sales-cyclus — gewoon kijken of het jouw realiteit oplost.
+      </p>
+    </div>
+  </section>
+
+  <section class="section alt" id="demo">
+    <div class="container grid-2">
+      <div class="panel">
+        <h2 class="h2">Demo aanvragen</h2>
+        <p class="p">Vul het formulier in of mail ons direct. We reageren meestal binnen 1–2 werkdagen.</p>
+
+        <form class="card" style="box-shadow:none" onsubmit="event.preventDefault(); alert('Bedankt! Dit is een demo-formulier in de template. Koppel het aan je backend of formulierprovider.');">
+          <label class="muted small" for="name">Naam</label><br>
+          <input id="name" name="name" required style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid var(--line); margin:6px 0 12px;"><br>
+
+          <label class="muted small" for="email">E-mail</label><br>
+          <input id="email" name="email" type="email" required style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid var(--line); margin:6px 0 12px;"><br>
+
+          <label class="muted small" for="units">Aantal eenheden (indicatie)</label><br>
+          <input id="units" name="units" placeholder="Bijv. 80" style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid var(--line); margin:6px 0 12px;"><br>
+
+          <label class="muted small" for="msg">Waar wil je vooral op bewaken?</label><br>
+          <textarea id="msg" name="msg" rows="5" placeholder="Opzegtermijnen, servicekosten, borg, meldingen, ..." style="width:100%; padding:12px 12px; border-radius:12px; border:1px solid var(--line); margin:6px 0 12px;"></textarea>
+
+          <button class="btn btn-primary" type="submit">Versturen</button>
+        </form>
+
+        <p class="fineprint">Tip: gebruik een formulierprovider (bijv. Formspree) of koppel aan je CRM.</p>
+      </div>
+
+      <div class="panel dark">
+        <h2 class="h2" style="margin-bottom:10px">Wat je kunt verwachten</h2>
+        <ul>
+          <li>15 min: jouw huidige proces in kaart</li>
+          <li>20 min: live producttour (deadlines, portal, borg)</li>
+          <li>10 min: integraties & export, security/AVG</li>
+          <li>5 min: next step (pilot of onboarding)</li>
+        </ul>
+        <div class="hero-ctas" style="margin-top: 14px">
+          <a class="btn btn-secondary" href="mailto:hello@wachtlaag.nl">Mail direct</a>
+          <a class="btn btn-outline" href="prijzen.html" style="color:white; border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.06)">Prijzen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <svg class="logo" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M14 1.5C7.096 1.5 1.5 7.096 1.5 14C1.5 20.904 7.096 26.5 14 26.5C20.904 26.5 26.5 20.904 26.5 14C26.5 7.096 20.904 1.5 14 1.5Z" stroke="currentColor" stroke-width="2"/>
+  <path d="M14 7V14L18.5 16.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6.8 19.2C8.4 21.2 11 22.5 14 22.5C18.7 22.5 22.5 18.7 22.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+        <span class="brand-text">Wachtlaag</span>
+      </div>
+      <p class="muted">De bewakingslaag bovenop jouw bestaande beheer. Contract → tijdlijn → waarschuwingen → dossier.</p>
+      <p class="fineprint">© <span id="year"></span> Wachtlaag. Alle rechten voorbehouden.</p>
+    </div>
+
+    <div>
+      <h3>Product</h3>
+      <a href="product.html#deadlines">Deadlines</a>
+      <a href="product.html#portal">Tenant portal</a>
+      <a href="product.html#borg">Borg & einde huur</a>
+      <a href="product.html#addons">Add-ons</a>
+    </div>
+
+    <div>
+      <h3>Bedrijf</h3>
+      <a href="security.html#privacy">Privacy</a>
+      <a href="security.html#aiact">AI-transparantie</a>
+      <a href="contact.html#demo">Demo</a>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p class="muted">E-mail: <a href="mailto:hello@wachtlaag.nl">hello@wachtlaag.nl</a></p>
+      <p class="muted">Telefoon: <a href="tel:+31000000000">+31 (0)00 000 0000</a></p>
+      <p class="muted">Amsterdam • NL</p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <div class="muted">Gebouwd voor Nederlandse woonverhuur (professionele beheerders en verhuurders).</div>
+    <div class="muted"><a href="security.html#disclaimer">Disclaimer</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
