@@ -311,6 +311,12 @@ a:hover{text-decoration:underline}
   background: linear-gradient(180deg, rgba(91,124,250,.14), rgba(124,77,255,.10));
   border-color: rgba(91,124,250,.18);
 }
+.text-dark-gray{
+  color: #4a4a4a;
+}
+.text-dark-gray li{
+  color: #4a4a4a;
+}
 .panel ul{margin:12px 0 0; padding-left: 18px}
 .panel li{margin:6px 0; color: var(--muted)}
 .panel.dark li{color: rgba(255,255,255,.85)}
