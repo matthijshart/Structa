@@ -113,11 +113,11 @@ a:hover{text-decoration:underline}
   display:inline-flex; align-items:center; gap:8px;
   padding:6px 10px;
   border-radius:999px;
-  background: rgba(24,194,156,.14);
-  color:#0b3d34;
+  background: rgba(91,124,250,.14);
+  color:#22316f;
   font-weight:700;
   font-size:13px;
-  border:1px solid rgba(24,194,156,.20);
+  border:1px solid rgba(91,124,250,.24);
 }
 
 /* Hero */
