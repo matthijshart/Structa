@@ -5,7 +5,7 @@
 
 .mock.mock-anim{
   /* één “loop” voor alle micro-animaties */
-  --wl-cycle: 12s;
+  --wl-cycle: 8s;
   position: relative;
 }
 
@@ -62,8 +62,8 @@
 }
 
 .mock.mock-anim.is-playing .wl-pill-step.step-1{ animation-delay: 0s; }
-.mock.mock-anim.is-playing .wl-pill-step.step-2{ animation-delay: 4s; }
-.mock.mock-anim.is-playing .wl-pill-step.step-3{ animation-delay: 8s; }
+.mock.mock-anim.is-playing .wl-pill-step.step-2{ animation-delay: 2.7s; }
+.mock.mock-anim.is-playing .wl-pill-step.step-3{ animation-delay: 5.4s; }
 
 /* Toont elke stap alleen in het “eerste derde” van zijn eigen loop.
    Met delays (0/4/8s) krijg je 3 stappen achter elkaar. */
@@ -86,9 +86,9 @@
 }
 
 /* Stagger binnen de 1e card (Termijnen) */
-.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(2) .bar{ animation-delay: 4.10s; }
-.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(3) .bar{ animation-delay: 4.30s; }
-.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(4) .bar{ animation-delay: 4.50s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(2) .bar{ animation-delay: 2.75s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(3) .bar{ animation-delay: 2.9s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(4) .bar{ animation-delay: 3.05s; }
 
 @keyframes wl-bar{
   0%, 10%   { transform: scaleX(.08); opacity: .65; }
@@ -109,9 +109,9 @@
   animation: wl-pop var(--wl-cycle) infinite;
 }
 
-.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(2) .chip{ animation-delay: 8.05s; }
-.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(3) .chip{ animation-delay: 8.35s; }
-.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(4) .chip{ animation-delay: 8.65s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(2) .chip{ animation-delay: 5.4s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(3) .chip{ animation-delay: 5.6s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(4) .chip{ animation-delay: 5.8s; }
 
 @keyframes wl-pop{
   0%, 10%   { opacity: 0; transform: translateY(8px); }
@@ -128,10 +128,10 @@
   animation: wl-tl var(--wl-cycle) infinite;
 }
 
-.mock.mock-anim.is-playing .timeline .tl:nth-child(1){ animation-delay: 8.15s; }
-.mock.mock-anim.is-playing .timeline .tl:nth-child(2){ animation-delay: 8.70s; }
-.mock.mock-anim.is-playing .timeline .tl:nth-child(3){ animation-delay: 9.25s; }
-.mock.mock-anim.is-playing .timeline .tl:nth-child(4){ animation-delay: 9.80s; }
+.mock.mock-anim.is-playing .timeline .tl:nth-child(1){ animation-delay: 5.45s; }
+.mock.mock-anim.is-playing .timeline .tl:nth-child(2){ animation-delay: 5.8s; }
+.mock.mock-anim.is-playing .timeline .tl:nth-child(3){ animation-delay: 6.15s; }
+.mock.mock-anim.is-playing .timeline .tl:nth-child(4){ animation-delay: 6.5s; }
 
 @keyframes wl-tl{
   0%, 10%   { opacity: 0; transform: translateY(10px); }
