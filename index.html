@@ -7,6 +7,7 @@
   <meta name="description" content="Structa is de bewakingslaag bovenop je bestaande beheer. Vertaal contracten naar deadlines, verzamel meldingen in één dossier en bewaak borg- en eindhuurderminnen.">
   <link rel="icon" href="2favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="wachtlaag-anim.css">
 </head>
 <body>
 
@@ -70,10 +71,15 @@
 
       <div>
         
-<div class="mock">
+      <div class="mock mock-anim" data-anim="wachtlaag-flow" role="img" aria-label="Animatie: contract uploaden, kernvelden bevestigen, automatische signalen en dossieropbouw.">
   <div class="mock-top">
     <div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div>
-    <div class="mock-pill">Contract → tijdlijn</div>
+        <div class="mock-pill">
+          <span class="wl-pill-static">Contract → tijdlijn</span>
+          <span class="wl-pill-step step-1" aria-hidden="true">Contract upload</span>
+          <span class="wl-pill-step step-2" aria-hidden="true">Kernvelden check</span>
+          <span class="wl-pill-step step-3" aria-hidden="true">Signalen → dossier</span>
+        </div>
   </div>
   <div class="mock-body">
     <div class="mock-col">
@@ -408,7 +414,8 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
+  <script src="wachtlaag-anim.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
