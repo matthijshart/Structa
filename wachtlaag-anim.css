@@ -1,0 +1,167 @@
+/* =========================================
+   Wachtlaag homepage animatie (Remote-style)
+   Drop-in add-on: gebruikt bestaande .mock UI
+   ========================================= */
+
+.mock.mock-anim{
+  /* één “loop” voor alle micro-animaties */
+  --wl-cycle: 12s;
+  position: relative;
+}
+
+/* Subtiele “sheen” sweep (processing gevoel) */
+.mock.mock-anim::after{
+  content: "";
+  position: absolute;
+  inset: -35% -60%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-60%) rotate(12deg);
+  /* lichte highlight; werkt op zowel licht als donker */
+  background: linear-gradient(115deg,
+    transparent 40%,
+    rgba(255,255,255,.18) 50%,
+    transparent 60%
+  );
+}
+
+.mock.mock-anim.is-playing::after{
+  animation: wl-sheen var(--wl-cycle) infinite;
+}
+
+@keyframes wl-sheen{
+  0%, 30% { opacity: 0; transform: translateX(-60%) rotate(12deg); }
+  36%     { opacity: .65; }
+  58%     { opacity: .12; transform: translateX(60%) rotate(12deg); }
+  66%,100%{ opacity: 0; transform: translateX(60%) rotate(12deg); }
+}
+
+/* ---------- Mock pill (kopregel) ---------- */
+
+.mock.mock-anim .mock-pill{
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  min-width: 170px; /* voorkomt “springen” */
+}
+
+.mock.mock-anim .wl-pill-step{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(4px);
+  white-space: nowrap;
+}
+
+.mock.mock-anim.is-playing .wl-pill-static{
+  opacity: 0;
+}
+
+.mock.mock-anim.is-playing .wl-pill-step{
+  animation: wl-pill var(--wl-cycle) infinite;
+}
+
+.mock.mock-anim.is-playing .wl-pill-step.step-1{ animation-delay: 0s; }
+.mock.mock-anim.is-playing .wl-pill-step.step-2{ animation-delay: 4s; }
+.mock.mock-anim.is-playing .wl-pill-step.step-3{ animation-delay: 8s; }
+
+/* Toont elke stap alleen in het “eerste derde” van zijn eigen loop.
+   Met delays (0/4/8s) krijg je 3 stappen achter elkaar. */
+@keyframes wl-pill{
+  0%, 4%        { opacity: 0; transform: translateY(4px); }
+  8%, 28%       { opacity: 1; transform: translateY(0); }
+  32%, 33%      { opacity: 0; transform: translateY(-4px); }
+  34%, 100%     { opacity: 0; transform: translateY(-4px); }
+}
+
+/* ---------- Termijnen bars: “vullen” ---------- */
+
+.mock.mock-anim .bar{
+  transform-origin: left;
+}
+
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .bar{
+  transform: scaleX(.08);
+  animation: wl-bar var(--wl-cycle) infinite;
+}
+
+/* Stagger binnen de 1e card (Termijnen) */
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(2) .bar{ animation-delay: 4.10s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(3) .bar{ animation-delay: 4.30s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:first-child .mock-row:nth-child(4) .bar{ animation-delay: 4.50s; }
+
+@keyframes wl-bar{
+  0%, 10%   { transform: scaleX(.08); opacity: .65; }
+  22%       { transform: scaleX(1);   opacity: 1; }
+  88%       { transform: scaleX(1);   opacity: 1; }
+  100%      { transform: scaleX(.08); opacity: .65; }
+}
+
+/* ---------- Meldingen chips: “pop in” ---------- */
+
+.mock.mock-anim .chip{
+  will-change: transform, opacity;
+}
+
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .chip{
+  opacity: 0;
+  transform: translateY(8px);
+  animation: wl-pop var(--wl-cycle) infinite;
+}
+
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(2) .chip{ animation-delay: 8.05s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(3) .chip{ animation-delay: 8.35s; }
+.mock.mock-anim.is-playing .mock-col:first-child .mock-card:nth-child(2) .mock-row:nth-child(4) .chip{ animation-delay: 8.65s; }
+
+@keyframes wl-pop{
+  0%, 10%   { opacity: 0; transform: translateY(8px); }
+  20%       { opacity: 1; transform: translateY(0); }
+  88%       { opacity: 1; transform: translateY(0); }
+  100%      { opacity: 0; transform: translateY(-6px); }
+}
+
+/* ---------- Dossier timeline items: sequentieel ---------- */
+
+.mock.mock-anim.is-playing .timeline .tl{
+  opacity: 0;
+  transform: translateY(10px);
+  animation: wl-tl var(--wl-cycle) infinite;
+}
+
+.mock.mock-anim.is-playing .timeline .tl:nth-child(1){ animation-delay: 8.15s; }
+.mock.mock-anim.is-playing .timeline .tl:nth-child(2){ animation-delay: 8.70s; }
+.mock.mock-anim.is-playing .timeline .tl:nth-child(3){ animation-delay: 9.25s; }
+.mock.mock-anim.is-playing .timeline .tl:nth-child(4){ animation-delay: 9.80s; }
+
+@keyframes wl-tl{
+  0%, 10%   { opacity: 0; transform: translateY(10px); }
+  22%       { opacity: 1; transform: translateY(0); }
+  90%       { opacity: 1; transform: translateY(0); }
+  100%      { opacity: 0; transform: translateY(-6px); }
+}
+
+/* Extra: dot pulse (subtiel) */
+.mock.mock-anim.is-playing .timeline .dot{
+  animation: wl-dot 1.8s infinite;
+}
+
+@keyframes wl-dot{
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.25); }
+}
+
+/* ---------- Motion safety ---------- */
+@media (prefers-reduced-motion: reduce){
+  .mock.mock-anim::after{ display:none !important; }
+  .mock.mock-anim .wl-pill-step{ display:none !important; }
+  .mock.mock-anim .wl-pill-static{ opacity: 1 !important; }
+
+  .mock.mock-anim .bar,
+  .mock.mock-anim .chip,
+  .mock.mock-anim .timeline .tl,
+  .mock.mock-anim .timeline .dot{
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
