@@ -50,7 +50,7 @@ a:hover{text-decoration:underline}
 }
 .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
 .brand-text{font-size:18px}
-.logo{color:var(--bg)}
+.logo{width:28px;height:28px;display:block;color:var(--bg)}
 .nav{display:flex; align-items:center; gap:16px}
 .nav-link{padding:10px 10px; border-radius:10px; color:var(--muted); font-weight:600}
 .nav-link.active{color:var(--text); background:rgba(91,124,250,.08)}
