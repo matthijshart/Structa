@@ -55,6 +55,25 @@ a:hover{text-decoration:underline}
 .nav-link{padding:10px 10px; border-radius:10px; color:var(--muted); font-weight:600}
 .nav-link.active{color:var(--text); background:rgba(91,124,250,.08)}
 .nav-cta{margin-left:4px}
+.nav-features{display:none}
+.nav-title{
+  display:block;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  color: var(--muted);
+  margin: 8px 8px 4px;
+  font-weight:800;
+}
+.nav-features ul{
+  list-style:none;
+  padding:0 8px 6px;
+  margin:0;
+  display:grid;
+  gap:6px;
+  color: var(--muted);
+  font-size: 14px;
+}
 .nav-toggle{
   display:none; align-items:center; justify-content:center;
   width:44px; height:44px;
@@ -465,4 +484,11 @@ details p{margin:10px 0 0; color: var(--muted)}
   .nav.open{display:flex}
   .nav-link{padding:12px 12px}
   .btn.nav-cta{width:100%}
+  .hero-badges{display:none}
+  .nav-features{
+    display:block;
+    border-top:1px solid var(--line);
+    margin: 8px 0 4px;
+    padding-top:8px;
+  }
 }
