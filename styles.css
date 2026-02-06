@@ -320,6 +320,10 @@ a:hover{text-decoration:underline}
 .panel ul{margin:12px 0 0; padding-left: 18px}
 .panel li{margin:6px 0; color: var(--muted)}
 .panel.dark li{color: rgba(255,255,255,.85)}
+.panel.dark .text-dark-gray,
+.panel.dark .text-dark-gray li{
+  color: #4a4a4a;
+}
 .hr{
   border:0; border-top:1px solid var(--line); margin: 18px 0;
 }
