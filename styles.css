@@ -265,7 +265,7 @@ a:hover{text-decoration:underline}
   --wl-bg: #f2f3f4;
   --wl-text: #111;
   --wl-muted: rgba(0,0,0,.65);
-  --wl-green: #0f4f3b;
+  --wl-green: var(--primary);
 
   background: var(--wl-bg);
   padding: clamp(56px, 6vw, 96px) 0;
