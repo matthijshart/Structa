@@ -42,7 +42,7 @@
   position: relative;
   display: inline-grid;
   place-items: center;
-  min-width: 170px; /* voorkomt “springen” */
+  min-width: 210px; /* voorkomt “springen” + ruimte voor langste label */
 }
 
 .mock.mock-anim .wl-pill-step{
