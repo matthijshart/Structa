@@ -25,7 +25,7 @@
       if (entry.isIntersecting) start(entry.target);
       else entry.target.classList.remove('is-playing');
     }
-  }, { threshold: 0.35 });
+  }, { threshold: 0.2 });
 
   mocks.forEach((el) => io.observe(el));
 })();
